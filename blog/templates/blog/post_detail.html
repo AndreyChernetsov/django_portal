@@ -28,12 +28,9 @@
           {% if post.status == 'in_progress' %} В процессе {% endif %}
           {% if post.status == 'completed' %} Выполнено {% endif %}
         </small>
-        {% if post.status == 'new' %}
           <div>
             <a class="btn btn-success btn-sm mt-1 mb-1" href="{% url 'post_edit' post.id %}">Изменить</a>
-            <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post_delete' post.id %}">Удалить</a>
           </div>
-        {% endif %}
       </div>
       <img class="w-100" src="{{ post.image.url }}" />
       <h2 class="article-title">{{ post.title }}</h2>
